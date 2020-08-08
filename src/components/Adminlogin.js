@@ -1,13 +1,23 @@
 import React, { useContext } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import { userContext } from './MyContext'
+
 import Container from 'react-bootstrap/Container'
+import { userContext } from './MyContext'
 
 
 const AdminLogin = () => {
+  const email = useContext(userContext)
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(email)
+  }
 
   return (
+    
+      
+        
+      
     <Container fluid>
     <Form>
       <h1>Admin Login</h1>
@@ -19,12 +29,14 @@ const AdminLogin = () => {
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button onClick={handleSubmit} variant="primary" type="submit">
             Submit
   </Button>
 
     </Form>
     </Container>
+    
+    
   )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
+import {Redirect,Route} from 'react-router-dom'
 
 const StudentData = () => {
 
@@ -38,7 +39,11 @@ const StudentData = () => {
       }
       
     }
-  
+    
+    const handleEdit = () => {
+     
+     
+    }
 
   return (
     <Table striped bordered hover variant="dark">
@@ -61,7 +66,7 @@ const StudentData = () => {
       <td>{res.lastname}</td>
       <td>{res.skills}</td>
       <td>{res.desired}</td>
-      <td><Button>Edit</Button>
+      <td><Button onClick={handleEdit}>Edit</Button>
       <Button onClick={handleDelete}>Delete</Button></td>
       </tr>
 

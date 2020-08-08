@@ -3,7 +3,14 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import { Container } from 'react-bootstrap';
-import { userContext } from './MyContext';
+import {userContext} from './MyContext'
+import AdminLogin from './Adminlogin'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const Signup = () => {
   const [email, setEmail] = useState([])
@@ -66,7 +73,7 @@ const Signup = () => {
           </Form>
         </Row>
       </Container>
-    </userContext.Provider>
+      </userContext.Provider>
   )
 }
 
